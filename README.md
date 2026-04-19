@@ -13,7 +13,7 @@ A Selenium-based automation tool for booking study spaces at the RWTH Aachen Lib
 ## Setup
 1. Copy `.env.example` to `.env`.
 2. Fill in your personal details in the `.env` file.
-3. Run the script:
+3. Run the snatcher:
    ```bash
-   python lrbuchung.py
+   python main.py
    ```
