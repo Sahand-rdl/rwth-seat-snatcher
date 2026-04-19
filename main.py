@@ -44,19 +44,19 @@ browser.get(('https://buchung.hsz.rwth-aachen.de/angebote/aktueller_zeitraum/_Le
 original_window = browser.current_window_handle
 #-----------------------------------------------------------------------------------------
 
-#saat 13:45 in bakhshe code bayad run beshe
+# hour 13:45 this code section should be run
 assert len(browser.window_handles) == 1
 
-saatYekBuchen = browser.find_element(By.NAME,'BS_Kursid_186305')
-saatYekBuchen.click()
+bookAtOne = browser.find_element(By.NAME,'BS_Kursid_186305')
+bookAtOne.click()
 
-# saatNohBuchen = browser.find_element(By.NAME,'BS_Kursid_186306')
-# saatNohBuchen.click()
+# bookAtNine = browser.find_element(By.NAME,'BS_Kursid_186306')
+# bookAtNine.click()
 
-#test for med. bib.
+# test for medical library
 '''
-saatYekBuchen = browser.find_element(By.NAME,'BS_Kursid_186309')
-saatYekBuchen.click()
+bookAtOne = browser.find_element(By.NAME,'BS_Kursid_186309')
+bookAtOne.click()
 '''
 wait = WebDriverWait(browser, 10)
 wait.until(EC.number_of_windows_to_be(2))
@@ -67,16 +67,16 @@ for window_handle in browser.window_handles:
         break
 
 
-#change the date a day before
-saatYekBuchenDovvom = browser.find_element(By.NAME,'BS_Termin_2022-06-28')
-saatYekBuchenDovvom.click()
+# change the date to the day before
+bookAtOneSecond = browser.find_element(By.NAME,'BS_Termin_2022-06-28')
+bookAtOneSecond.click()
 
 #-----------------------------------------------------------------------------------------
-#to register without username and password:
+# to register without username and password:
 #'''
 
-#filloutForm 
-#in choice az radio choice e 
+# filloutForm 
+# this choice is from radio choices
 genderRadio = browser.find_element(By.CSS_SELECTOR,"input[value='X']")
 genderRadio.click()
 
